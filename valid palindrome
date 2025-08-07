@@ -1,0 +1,8 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        joined =  " ".join(w.lower() for w in s)
+        cleaned = re.sub(r'[^a-zA-Z0-9]', '', joined)
+        if cleaned == cleaned[::-1] :
+            return True
+        else :
+            return False
